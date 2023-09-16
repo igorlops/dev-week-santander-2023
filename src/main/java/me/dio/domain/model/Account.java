@@ -20,9 +20,13 @@ public class Account {
 	
 	private String agency;
 	
-	@Column(scale = 2, precision = 13)
-	private BigDecimal balance;
-	private BigDecimal limit;
+    @Column(precision = 13, scale = 2)
+    private BigDecimal balance;
+
+    @Column(name = "additional_limit", precision = 13, scale = 2)
+    private BigDecimal limit;
+	
+	
 	public Long getId() {
 		return id;
 	}

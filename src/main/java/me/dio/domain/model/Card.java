@@ -15,11 +15,12 @@ public class Card {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(unique = true)
-	private String number;
-	
-	@Column(scale = 2, precision = 13)
-	private BigDecimal limit;
+    @Column(unique = true)
+    private String number;
+
+    @Column(name = "available_limit", precision = 13, scale = 2)
+    private BigDecimal limit;
+    
 	public Long getId() {
 		return id;
 	}
